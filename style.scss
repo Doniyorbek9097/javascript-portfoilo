@@ -1,0 +1,305 @@
+
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Lato;
+
+}
+
+header{
+  width: 100%;
+  height: 130vh;
+  z-index: -1;
+  position: relative;
+
+}
+
+nav{
+  width: 100%;
+  height: 80px;
+  background-color: rgb(253, 194, 0);
+  position: absolute;
+  z-index: 1000;
+  display: flex;
+  justify-content:space-around;
+  align-items: center;
+.logo{
+  font-size: 30px;
+  text-transform: uppercase;
+}
+.nav-list{
+  display: flex;
+li{
+  margin: 0 30px;
+  list-style: none;
+  a{
+    text-decoration: none;
+    font-size: 20px;
+    color: black;
+    font-weight: 500;
+  }
+}  
+}
+}
+
+
+
+
+
+
+
+/* PARALLAX */
+$baseurl: 'http://www.firewatchgame.com/';
+
+.body {
+  margin: -5px;
+}
+
+.keyart, .keyart_layer {
+	height: 1000px;
+}
+
+#parallax {
+	display: block;
+}
+
+.keyart {
+	position: relative;
+	z-index: 10;
+}
+
+.keyart_layer {
+	background-position: bottom center;
+	background-size: auto 1038px;
+	background-repeat: repeat-x;
+	width: 100%;
+	position: absolute;
+}
+.keyart_layer.parallax {
+	position: fixed;
+}
+	#keyart-0 {
+		background-image: url($baseurl + 'images/parallax/parallax0.png');
+		background-color: #ffaf1b;
+	}
+	#keyart-1 {
+		background-image: url($baseurl + 'images/parallax/parallax1.png');
+	}
+	#keyart-2 {
+		background-image: url($baseurl + 'images/parallax/parallax2.png');
+	}
+	#keyart-3 {
+		background-image: url($baseurl + 'images/parallax/parallax3.png');
+	}
+	#keyart-4 {
+		background-image: url($baseurl + 'images/parallax/parallax4.png');
+	}
+	#keyart-5 {
+		background-image: url($baseurl + 'images/parallax/parallax5.png');
+	}
+	#keyart-6 {
+		background-image: url($baseurl + 'images/parallax/parallax6.png');
+	}
+	#keyart-7 {
+		background-image: url($baseurl + 'images/parallax/parallax7.png');
+	}
+	#keyart-8 {
+		background-image: url($baseurl + 'images/parallax/parallax8.png');
+	}
+	#keyart-scrim {
+		background-color: #ffaf00;
+		opacity: 0;
+	}
+
+@media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi){ 
+   	#keyart-0 {
+		background-image: url($baseurl + 'images/parallax/parallax0@2x.png');
+		background-color: #ffaf1b;
+	}
+	#keyart-1 {
+		background-image: url($baseurl + 'images/parallax/parallax1@2x.png');
+	}
+	#keyart-2 {
+		background-image: url($baseurl + 'images/parallax/parallax2@2x.png');
+	}
+	#keyart-3 {
+		background-image: url($baseurl + 'images/parallax/parallax3@2x.png');
+	}
+	#keyart-4 {
+		background-image: url($baseurl + 'images/parallax/parallax4@2x.png');
+	}
+	#keyart-5 {
+		background-image: url($baseurl + 'images/parallax/parallax5@2x.png');
+	}
+	#keyart-6 {
+		background-image: url($baseurl + 'images/parallax/parallax6@2x.png');
+	}
+	#keyart-7 {
+		background-image: url($baseurl + 'images/parallax/parallax7@2x.png');
+	}
+	#keyart-8 {
+		background-image: url($baseurl + 'images/parallax/parallax8@2x.png');
+	}
+}
+
+main{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  height: 100vh;
+   background-color: rgb(29, 8, 8);
+   padding-top: 200px;
+   h1 {
+  font-size: 3.2rem;
+  padding-top: 2rem;
+}
+
+   h1,p {
+  padding: 2rem 0 3rem;
+  color: white;
+}
+}
+
+html {
+  font-size: 62.5%;
+}
+
+
+
+
+
+
+.main {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+ width: 100%;
+ height: 100vh;
+ background-color:rgb(29, 8, 8) ;
+}
+
+.wrap {
+  margin: 2rem;
+
+  transform-style: preserve-3d;
+  transform: perspective(100rem);
+
+  cursor: pointer;
+}
+
+.container {
+  --rX: 0;
+  --rY: 0;
+  --bX: 50%;
+  --bY: 80%;
+
+  width: 30rem;
+  height: 36rem;
+  border: 1px solid var(--background-color);
+  border-radius: 1.6rem;
+  padding: 4rem;
+  display: flex;
+  align-items: flex-end;
+  position: relative;
+  transform: rotateX(calc(var(--rX) * 1deg)) rotateY(calc(var(--rY) * 1deg));
+
+  transition: transform .6s 1s;
+}
+
+
+
+.container::before,
+.container::after {
+  content: "";
+
+  width: 2rem;
+  height: 2rem;
+  border: 1px solid #fff;
+
+  position: absolute;
+  z-index: 2;
+
+  opacity: .3;
+  transition: .3s;
+}
+
+.container::before {
+  top: 2rem;
+  right: 2rem;
+
+  border-bottom-width: 0;
+  border-left-width: 0;
+}
+
+.container::after {
+  bottom: 2rem;
+  left: 2rem;
+
+  border-top-width: 0;
+  border-right-width: 0;
+}
+
+.container--active {
+  transition: none;
+}
+
+.container--1{
+   filter: hue-rotate(80deg) saturate(140%);
+   background: linear-gradient(rgba(218, 0, 0, 0.1), rgba(99, 214, 4, 0.1)), url("https://assets.afcdn.com/story/20200914/2087084_w944h530c1cx600cy400cxt0cyt0cxb1200cyb800.jpg");
+  background-position: var(--bX) var(--bY);
+   background-repeat: no-repeat;
+   background-size: cover;
+ 
+}
+
+.container--1:hover,.container--2:hover,.container--3:hover{
+   box-shadow: 0 0 3rem .5rem rgb(253, 253, 253);
+
+  
+}
+
+
+.container--2 {
+  filter: hue-rotate(80deg) saturate(140%);
+   background: linear-gradient(rgba(218, 0, 0, 0.1), rgba(99, 214, 4, 0.1)), url("http://thebodyisnotanapology.com/wp-content/uploads/2018/02/pexels-photo-459947.jpg");
+  background-position: var(--bX) var(--bY);
+   background-repeat: no-repeat;
+   background-size: cover;
+ 
+}
+
+.container--3 {
+  filter: hue-rotate(160deg) saturate(140%);
+   background: linear-gradient(rgba(218, 0, 0, 0.1), rgba(99, 214, 4, 0.1)), url("https://img.freepik.com/free-photo/indoor-shot-beautiful-happy-african-american-woman-smiling-cheerfully-keeping-her-arms-folded-relaxing-indoors-after-morning-lectures-university_273609-1270.jpg?size=626&ext=jpg&ga=GA1.2.1961860318.1614988800");
+  background-position: var(--bX) var(--bY);
+   background-repeat: no-repeat;
+   background-size: cover;
+ 
+}
+
+.container p {
+  color: hsla(0, 0%, 100%, .6);
+  font-size: 2.2rem;
+}
+
+.wrap:hover .container::before,
+.wrap:hover .container::after {
+  width: calc(100% - 4rem);
+  height: calc(100% - 4rem);
+}
+
+.abs-site-link {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  color: hsla(0, 0%, 0%, .6);
+  font-size: 1.6rem;
+}
+
+
+
