@@ -128,3 +128,10 @@ const wrap3 = new parallaxTiltEffect({
   element: $('.wrap--3'),
   tiltEffect: 'reverse'
 });
+
+
+//skills
+
+
+//search project
+
